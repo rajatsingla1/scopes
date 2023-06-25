@@ -1,18 +1,22 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <div class="wrapper">
+    <header-view></header-view>
+  </div>
   <RouterView />
 </template>
 
-<style scoped>
-</style>
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+import { useCorporatesStore } from "@/stores/corporates";
+
+import HeaderView from "@/components/Header.vue";
+
+const store = useCorporatesStore();
+
+onMounted(async () => {
+  await store.fetchCorporates();
+});
+</script>
+
+<style scoped></style>
