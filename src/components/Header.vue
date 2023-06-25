@@ -14,8 +14,9 @@
               <li class="mr-8 flex items-center text-md hover:text-blue-800">
                 <span
                   class="material-symbols-rounded text-sm md:text-xl brand-color mr-1 -mt-0.5"
-                  >dashboard</span
                 >
+                  dashboard
+                </span>
                 Dashboard
               </li>
             </router-link>
@@ -23,8 +24,9 @@
               <li class="flex items-center text-md hover:text-blue-800">
                 <span
                   class="material-symbols-rounded text-sm md:text-xl brand-color mr-1 -mt-0.5"
-                  >public</span
                 >
+                  public
+                </span>
                 About
               </li>
             </router-link>
@@ -35,27 +37,7 @@
   </header>
 </template>
 
-<script setup lang="ts">
-import { computed, ref } from "vue";
-import { useRoute } from "vue-router";
-
-const count = ref(0);
-
-const route = useRoute();
-
-const isCreate = computed(() => route.path === "/create");
-
-const createClickHandler = () => {
-  if (window.location.pathname == "/create") {
-    window.location.reload();
-  }
-};
-</script>
-
 <style scoped>
-.logo {
-  font-family: "Alex Brush", cursive;
-}
 .header {
   backdrop-filter: blur(12px);
   background-color: rgba(255, 255, 255, 0.8);
