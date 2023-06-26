@@ -1,22 +1,22 @@
 <template>
-  <div class="mx-auto max-w-6xl px-4 mt-32 sm:px-6 lg:px-8">
-    <div class="mt-8 flow-root">
-      <div class="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
+  <div
+    class="mx-auto max-w-6xl px-4 mt-32 sm:px-6 lg:px-8 rounded-lg ring-1 ring-slate-900/10"
+  >
+    <div class="mt-0 flow-root">
+      <div class="-mx-4 my-0 sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 align-middle">
-          <table
-            class="min-w-full border-separate border-spacing-0 border rounded"
-          >
+          <table class="min-w-full border-separate border-spacing-0">
             <thead>
               <tr>
                 <th
                   scope="col"
-                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8"
+                  class="sticky top-[57px] z-10 border-b border-gray-300 bg-white bg-opacity-75 py-3.5 pl-4 pr-2 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8"
                 >
                   Entity
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[57px] z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
                   <div class="flex items-center flex-col">
                     <span class="block">Scope 1</span>
@@ -27,7 +27,7 @@
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[57px] z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
                   <div class="flex items-center flex-col">
                     <span class="block">Scope 2</span>
@@ -38,7 +38,7 @@
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[57px] z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
                   <div class="flex items-center flex-col">
                     <span class="block">Scope 3</span>
@@ -49,13 +49,13 @@
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter align-top"
+                  class="sticky top-[57px] z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter align-top"
                 >
                   Employees
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[57px] z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
                   <div class="flex items-center flex-col">
                     <span class="block">Annual Revenue</span>
@@ -66,7 +66,7 @@
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter align-top"
+                  class="sticky top-[57px] z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter align-top w-32"
                 >
                   Allied Offsets Grade
                 </th>
@@ -131,16 +131,23 @@
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
-                  {{ numberToLocale(corporate.stats[0].numberOfEmployees) }}
+                  <span class="text-sm text-gray-500 font-normal">{{
+                    numberToLocale(corporate.stats[0].numberOfEmployees)
+                  }}</span>
                 </td>
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
-                  ${{
-                    numberToLocale(
-                      Number(corporate.stats[0].annualRevenue) / 1000000
-                    )
-                  }}
+                  <span
+                    v-if="corporate.stats[0].annualRevenue"
+                    class="text-sm text-gray-500 font-normal"
+                  >
+                    ${{
+                      numberToLocale(
+                        Number(corporate.stats[0].annualRevenue) / 1000000
+                      )
+                    }}
+                  </span>
                 </td>
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-center text-sm font-medium sm:pr-8 lg:pr-8"
