@@ -11,7 +11,9 @@
         <li class="flex flex-row mx-auto md:mx-0 pt-2 md:pt-0">
           <ul class="flex">
             <router-link to="/">
-              <li class="mr-8 flex items-center text-md hover:text-blue-800">
+              <li
+                class="mr-8 flex items-center font-light text-gray-600 text-md hover:text-blue-800"
+              >
                 <span
                   class="material-symbols-rounded text-sm md:text-xl brand-color mr-1 -mt-0.5"
                 >
@@ -21,7 +23,9 @@
               </li>
             </router-link>
             <router-link to="/">
-              <li class="flex items-center text-md hover:text-blue-800">
+              <li
+                class="flex items-center text-md font-light text-gray-600 hover:text-blue-800"
+              >
                 <span
                   class="material-symbols-rounded text-sm md:text-xl brand-color mr-1 -mt-0.5"
                 >

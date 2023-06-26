@@ -2,7 +2,9 @@
   <div class="wrapper">
     <header-view></header-view>
   </div>
-  <RouterView />
+  <div class="mt-12">
+    <RouterView />
+  </div>
 </template>
 
 <script setup lang="ts">

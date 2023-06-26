@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <div class="m-4 mt-20 mx-20">
+    <div class="m-4">
       <corporates-table></corporates-table>
     </div>
   </div>

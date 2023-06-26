@@ -1,76 +1,74 @@
 <template>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-6xl px-4 mt-32 sm:px-6 lg:px-8">
     <div class="mt-8 flow-root">
       <div class="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 align-middle">
-          <table class="min-w-full border-separate border-spacing-0">
+          <table
+            class="min-w-full border-separate border-spacing-0 border rounded"
+          >
             <thead>
               <tr>
                 <th
                   scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8"
+                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8"
                 >
-                  Entity Name
+                  Entity
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-0 z-10 hidden border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:table-cell"
+                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
-                  Entity Type
+                  <div class="flex items-center flex-col">
+                    <span class="block">Scope 1</span>
+                    <span class="text-center block font-normal text-sm">
+                      (tCO2)
+                    </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-0 z-10 hidden border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter lg:table-cell"
+                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
-                  Sector
+                  <div class="flex items-center flex-col">
+                    <span class="block">Scope 2</span>
+                    <span class="text-center block font-normal text-sm">
+                      (tCO2)
+                    </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
-                  HQ Location
+                  <div class="flex items-center flex-col">
+                    <span class="block">Scope 3</span>
+                    <span class="text-center block font-normal text-sm">
+                      (tCO2)
+                    </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                >
-                  Scope 1 (tCO2)
-                </th>
-                <th
-                  scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                >
-                  Scope 2 (tCO2)
-                </th>
-                <th
-                  scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                >
-                  Scope 3 (tCO2)
-                </th>
-                <th
-                  scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter align-top"
                 >
                   Employees
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
                 >
-                  Annual Revenue (in mln USD)
+                  <div class="flex items-center flex-col">
+                    <span class="block">Annual Revenue</span>
+                    <span class="text-center block font-normal text-sm">
+                      (in mln USD)
+                    </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-12 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter align-top"
                 >
                   Allied Offsets Grade
-                </th>
-                <th
-                  scope="col"
-                  class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                >
-                  Allied Offsets Sector Grade
                 </th>
               </tr>
             </thead>
@@ -83,61 +81,83 @@
                 <td
                   class="whitespace-wrap border-b border-gray-200 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8"
                 >
-                  {{ corporate.company }}
-                </td>
-                <td
-                  class="whitespace-nowrap border-b border-gray-200 hidden px-3 py-4 text-sm text-gray-500 sm:table-cell"
-                >
-                  Corporate
-                </td>
-                <td
-                  class="whitespace-wrap border-b border-gray-200 hidden px-3 py-4 text-sm text-gray-500 lg:table-cell"
-                >
-                  {{ corporate.sector }}
-                </td>
-                <td
-                  class="whitespace-wrap border-b border-gray-200 px-3 py-4 text-sm text-gray-500"
-                >
-                  {{ corporate.location }}
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  {{ corporate.stats[0].scope1 }}
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  {{ corporate.stats[0].scope2 }}
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  {{ corporate.stats[0].scope3 }}
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  {{ corporate.stats[0].numberOfEmployees }}
+                  <h1 class="text-lg text-gray-800 mb-1 font-normal">
+                    {{ corporate.company }}
+                  </h1>
+
+                  <div
+                    class="text-sm text-gray-500 font-normal flex"
+                    v-if="corporate.sector"
+                  >
+                    <span
+                      class="material-symbols-rounded text-sm text-gray-800 font-normal mr-1"
+                    >
+                      factory
+                    </span>
+                    <span class="text-sm font-normal">
+                      {{ corporate.sector }}
+                    </span>
+                  </div>
+
+                  <div
+                    class="text-sm text-gray-500 font-normal flex"
+                    v-if="corporate.location"
+                  >
+                    <span
+                      class="material-symbols-rounded text-sm text-gray-800 font-normal mr-1"
+                    >
+                      location_on
+                    </span>
+                    <span class="text-sm text-gray-500 font-normal">
+                      {{ corporate.location }}
+                    </span>
+                  </div>
                 </td>
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
-                  ${{ Number(corporate.stats[0].annualRevenue) / 1000000 }}
+                  {{ numberToLocale(corporate.stats[0].scope1) }}
                 </td>
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
-                  {{ corporate.aoRating }}
+                  {{ numberToLocale(corporate.stats[0].scope2) }}
                 </td>
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
-                  {{ corporate.aoSectorRating }}
+                  {{ numberToLocale(corporate.stats[0].scope3) }}
+                </td>
+                <td
+                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
+                >
+                  {{ numberToLocale(corporate.stats[0].numberOfEmployees) }}
+                </td>
+                <td
+                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
+                >
+                  ${{
+                    numberToLocale(
+                      Number(corporate.stats[0].annualRevenue) / 1000000
+                    )
+                  }}
+                </td>
+                <td
+                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-center text-sm font-medium sm:pr-8 lg:pr-8"
+                >
+                  <div class="flex flex-col">
+                    <h1 class="text-xl text-gray-700">
+                      {{ corporate.aoRating }}
+                    </h1>
+                    <span
+                      class="text-gray-500 block pt-2"
+                      v-if="corporate.aoSectorRating"
+                    >
+                      (Sector: {{ corporate.aoSectorRating }})</span
+                    >
+                  </div>
                 </td>
               </tr>
-
-              <!-- More people... -->
             </tbody>
           </table>
         </div>
@@ -153,6 +173,11 @@ import { useCorporatesStore } from "@/stores/corporates";
 const store = useCorporatesStore();
 
 const corporates: any = computed(() => store.corporates);
+
+const numberToLocale = (num: Number | null) => {
+  if (num) return num.toLocaleString();
+  return "";
+};
 
 onMounted(async () => {});
 </script>
