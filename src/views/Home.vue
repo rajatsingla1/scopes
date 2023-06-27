@@ -3,6 +3,16 @@
     <div class="m-4">
       <corporates-table></corporates-table>
     </div>
+                  <div class="flex justify-center mt-16 mb-64">
+                    <button :disabled="corporateStore.loading" @click="corporateStore.appendCorporates" type="button" :class="[
+                      ' focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 shadow-md',
+                      { 'bg-green-100 hover:bg-green-100': corporateStore.loading }
+                    ]">
+
+                      {{ corporateStore.loading ? 'Loading..' : 'Show More' }}
+
+                    </button>
+                  </div>
   </div>
 </template>
 
@@ -12,11 +22,9 @@ import { useCorporatesStore } from "@/stores/corporates";
 
 import CorporatesTable from "@/components/CorporatesTable.vue";
 
-const store = useCorporatesStore();
+const corporateStore = useCorporatesStore();
 
-const corporates = computed(() => store.corporates);
-
-onMounted(async () => {});
+onMounted(async () => { });
 </script>
 
 <style></style>
