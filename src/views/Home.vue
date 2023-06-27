@@ -1,18 +1,21 @@
 <template>
   <div class="homepage">
-    <div class="m-4">
+    <div class="m-2 md:m-4">
       <corporates-table></corporates-table>
     </div>
-                  <div class="flex justify-center mt-16 mb-64">
-                    <button :disabled="corporateStore.loading" @click="corporateStore.appendCorporates" type="button" :class="[
-                      ' focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 shadow-md',
-                      { 'bg-green-100 hover:bg-green-100': corporateStore.loading }
-                    ]">
-
-                      {{ corporateStore.loading ? 'Loading..' : 'Show More' }}
-
-                    </button>
-                  </div>
+    <div class="flex justify-center mt-4 md:mt-16 mb-64">
+      <button
+        :disabled="corporateStore.loading"
+        @click="corporateStore.appendCorporates"
+        type="button"
+        :class="[
+          ' focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 shadow-md',
+          { 'bg-green-100 hover:bg-green-100': corporateStore.loading },
+        ]"
+      >
+        {{ corporateStore.loading ? "Loading.." : "Show More" }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -24,7 +27,7 @@ import CorporatesTable from "@/components/CorporatesTable.vue";
 
 const corporateStore = useCorporatesStore();
 
-onMounted(async () => { });
+onMounted(async () => {});
 </script>
 
 <style></style>
