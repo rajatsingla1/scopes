@@ -116,35 +116,35 @@
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
-                  {{ numberToLocale(corporate.stats[0].scope1) }}
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  {{ numberToLocale(corporate.stats[0].scope2) }}
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  {{ numberToLocale(corporate.stats[0].scope3) }}
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  <span class="text-sm text-gray-500 font-normal">{{
-                    numberToLocale(corporate.stats[0].numberOfEmployees)
-                  }}</span>
-                </td>
-                <td
-                  class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
-                >
-                  <span
-                    v-if="corporate.stats[0].annualRevenue"
+                    {{ numberToLocale(corporate.scope1) }}
+                  </td>
+                  <td
+                    class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
+                  >
+                    {{ numberToLocale(corporate.scope2) }}
+                  </td>
+                  <td
+                    class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
+                  >
+                    {{ numberToLocale(corporate.scope3) }}
+                  </td>
+                  <td
+                    class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
+                  >
+                    <span class="text-sm text-gray-500 font-normal">{{
+                      numberToLocale(corporate.numberOfEmployees)
+                    }}</span>
+                  </td>
+                  <td
+                    class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
+                  >
+                    <span
+                      v-if="corporate.annualRevenue"
                     class="text-sm text-gray-500 font-normal"
                   >
                     ${{
                       numberToLocale(
-                        Number(corporate.stats[0].annualRevenue) / 1000000
+                        Number(corporate.annualRevenue) / 1000000
                       )
                     }}
                   </span>
