@@ -1,6 +1,7 @@
 <template>
   <div class="homepage">
     <div class="m-2 md:m-4">
+      <rank-by-bar ></rank-by-bar>
       <corporates-table></corporates-table>
     </div>
     <div class="flex justify-center mt-4 md:mt-16 mb-64">
@@ -24,6 +25,7 @@ import { onMounted, computed } from "vue";
 import { useCorporatesStore } from "@/stores/corporates";
 
 import CorporatesTable from "@/components/CorporatesTable.vue";
+import RankByBar from "@/components/RankByBar.vue";
 
 const corporateStore = useCorporatesStore();
 
