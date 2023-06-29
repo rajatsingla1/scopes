@@ -6,7 +6,7 @@
     <span
       @click="() => corporateStore.updateOrderBy('scope_1')"
       :class="[
-        'option border-blue-500',
+        'option border-blue-500 bg-white',
         { 'active bg-blue-500': corporateStore.orderBy == 'scope_1' }
       ]"
       >Scope 1</span
@@ -14,7 +14,7 @@
     <span
       @click="() => corporateStore.updateOrderBy('scope_2')"
       :class="[
-        'option border-blue-500',
+        'option border-blue-500 bg-white',
         { 'active bg-blue-500': corporateStore.orderBy == 'scope_2' }
       ]"
       >Scope 2</span
@@ -22,7 +22,7 @@
     <span
       @click="() => corporateStore.updateOrderBy('scope_3')"
       :class="[
-        'option border-blue-500',
+        'option border-blue-500 bg-white',
         { 'active bg-blue-500': corporateStore.orderBy == 'scope_3' }
       ]"
       >Scope 3</span
@@ -30,7 +30,7 @@
     <span
       @click="() => corporateStore.updateOrderBy('company', '')"
       :class="[
-        'option border-blue-500',
+        'option border-blue-500 bg-white',
         { 'active bg-blue-500': corporateStore.orderBy == 'company' }
       ]"
       >Company Name</span
@@ -38,7 +38,7 @@
     <span
       @click="() => corporateStore.updateOrderBy('number_of_employees')"
       :class="[
-        'option border-blue-500',
+        'option border-blue-500 bg-white',
         {
           'active bg-blue-500': corporateStore.orderBy == 'number_of_employees'
         }
@@ -48,7 +48,7 @@
     <span
       @click="() => corporateStore.updateOrderBy('annual_revenue')"
       :class="[
-        'option border-blue-500',
+        'option border-blue-500 bg-white',
         { 'active bg-blue-500': corporateStore.orderBy == 'annual_revenue' }
       ]"
       >Revenue</span
