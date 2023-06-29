@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 import { useCorporatesStore } from "@/stores/corporates";
 
 import HeaderView from "@/components/Header.vue";
