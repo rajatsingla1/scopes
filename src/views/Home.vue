@@ -1,7 +1,9 @@
 <template>
   <div class="homepage">
     <div class="m-2 md:m-4">
-      <div class="mx-auto flex max-w-6xl justify-between px-3 md:mt-28">
+      <h1 class="text-center text-2xl md:mt-12">World’s largest aggregated data source for carbon offsetting</h1>
+      
+      <div class="mx-auto flex max-w-6xl justify-between px-3 md:mt-12">
         <rank-by-bar></rank-by-bar>
         
       </div>
