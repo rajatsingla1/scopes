@@ -6,50 +6,50 @@
     <span
       @click="() => corporateStore.updateOrderBy('scope_1')"
       :class="[
-        'option border-blue-500 bg-white',
-        { 'active bg-blue-500': corporateStore.orderBy == 'scope_1' }
+        'option border-blue-500',
+        corporateStore.orderBy == 'scope_1' ? 'active bg-blue-500' : 'bg-white'
       ]"
       >Scope 1</span
     >
     <span
       @click="() => corporateStore.updateOrderBy('scope_2')"
       :class="[
-        'option border-blue-500 bg-white',
-        { 'active bg-blue-500': corporateStore.orderBy == 'scope_2' }
+        'option border-blue-500',
+        corporateStore.orderBy == 'scope_2' ? 'active bg-blue-500' : 'bg-white'
       ]"
       >Scope 2</span
     >
     <span
       @click="() => corporateStore.updateOrderBy('scope_3')"
       :class="[
-        'option border-blue-500 bg-white',
-        { 'active bg-blue-500': corporateStore.orderBy == 'scope_3' }
+        'option border-blue-500',
+        corporateStore.orderBy == 'scope_3' ? 'active bg-blue-500' : 'bg-white'
       ]"
       >Scope 3</span
     >
     <span
       @click="() => corporateStore.updateOrderBy('company', '')"
       :class="[
-        'option border-blue-500 bg-white',
-        { 'active bg-blue-500': corporateStore.orderBy == 'company' }
+        'option border-blue-500',
+        corporateStore.orderBy == 'company' ? 'active bg-blue-500' : 'bg-white'
       ]"
       >Company Name</span
     >
     <span
       @click="() => corporateStore.updateOrderBy('number_of_employees')"
       :class="[
-        'option border-blue-500 bg-white',
-        {
-          'active bg-blue-500': corporateStore.orderBy == 'number_of_employees'
-        }
+        'option border-blue-500',
+        corporateStore.orderBy == 'number_of_employees'
+          ? 'active bg-blue-500'
+          : 'bg-white'
       ]"
       >Employees</span
     >
     <span
       @click="() => corporateStore.updateOrderBy('annual_revenue')"
       :class="[
-        'option border-blue-500 bg-white',
-        { 'active bg-blue-500': corporateStore.orderBy == 'annual_revenue' }
+        'option border-blue-500',
+        corporateStore.orderBy == 'annual_revenue' ? 'active bg-blue-500' : 'bg-white'
       ]"
       >Revenue</span
     >
