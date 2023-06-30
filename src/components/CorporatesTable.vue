@@ -170,7 +170,10 @@
                   class="relative whitespace-wrap border-b border-gray-200 py-4 pr-4 pl-3 text-center text-sm font-medium sm:pr-8 lg:pr-8"
                 >
                   <div class="flex flex-col">
-                    <h1 class="text-xl text-gray-700">
+                    <h1
+                      class="text-xl text-gray-700"
+                      :style="`color:${getGradeColor(corporate.aoRating)}`"
+                    >
                       {{ corporate.aoRating }}
                     </h1>
                     <span
@@ -193,6 +196,7 @@
 <script setup lang="ts">
 import { onMounted, computed } from 'vue';
 import { useCorporatesStore } from '@/stores/corporates';
+import { Grades } from '@/utils/enum';
 
 const corporateStore = useCorporatesStore();
 
@@ -212,6 +216,12 @@ const getScope = (value: number, employees: number, revenue: number) => {
   if (scopeRatio.value == 'annual_revenue' && revenue)
     return numberToLocale(value / revenue);
   return numberToLocale(value);
+};
+
+const getGradeColor = (grade: string) => {
+  if (grade) grade = grade.trim();
+  else return '';
+  return Grades[grade as keyof typeof Grades];
 };
 
 onMounted(async () => {});
