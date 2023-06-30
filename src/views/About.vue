@@ -8,7 +8,7 @@
         </p>
         <p class="mt-6 text-lg leading-8 text-gray-600">
           The database can be filtered by entity name, entity type, and industry. AlliedOffsets is the world’s largest aggregated data source for carbon offsetting. If you would like to learn more or book a demo of our data, please visit
-          <a href="https://www.alliedoffsets.com" target="_blank" class="font-semibold leading-6 text-green-600">www.alliedoffsets.com</a>
+          <a href="https://www.alliedoffsets.com" target="_blank" class="font-semibold leading-6 text-green-600">www.alliedoffsets.com</a>.
         </p>
       </div>
     </div>

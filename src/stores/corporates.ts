@@ -9,7 +9,7 @@ export const useCorporatesStore = defineStore('corporates', () => {
   const loading = ref(false);
   const orderBy = ref('scope_1');
   const orderByOrder = ref('-');
-  const scopeRatio = ref('absolute');
+  const scopeRatio = ref('number_of_employees');
 
   const ratioSlug = computed(() => {
     if (scopeRatio.value != 'absolute' && orderBy.value.includes('scope')) {
@@ -52,7 +52,7 @@ export const useCorporatesStore = defineStore('corporates', () => {
       const response = await axios.get(
         `https://api.alliedoffsets.com/corporates-public?page=${
           currentPage.value + 1
-        }&per_page=${perPage.value}&order_by=${orderBy.value}${orderByOrder.value}`
+        }&per_page=${perPage.value}&order_by=${orderBy.value}${ratioSlug.value}${orderByOrder.value}`
       );
       corporates.value = corporates.value.concat(response.data.result);
       currentPage.value += 1;

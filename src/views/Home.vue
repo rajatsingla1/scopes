@@ -3,8 +3,13 @@
     <div class="m-2 md:m-4">
       <div class="mx-auto flex max-w-6xl justify-between px-3 md:mt-28">
         <rank-by-bar></rank-by-bar>
-        <ratio></ratio>
+        
       </div>
+      <div class="mx-auto flex max-w-6xl justify-between px-3">
+        
+        <ratio></ratio>  
+      </div>
+      
 
       <corporates-table></corporates-table>
     </div>

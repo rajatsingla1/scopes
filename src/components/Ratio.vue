@@ -1,10 +1,10 @@
 <template>
-  <div class="relative flex justify-end text-left mr-0 px-3 -mt-2">
+  <div class="relative flex  mr-0 " ref="moreOptionsEl">
     <div>
-      <span class="block mb-1 text-gray-700 text-sm font-semibold">Show Scopes as</span>
+      <span class=" pr-4 mb-1 text-gray-700 text-sm font-semibold">Show Scopes as</span>
       <button
         type="button"
-        class="inline-flex justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-blue-500 hover:bg-gray-50 w-52"
+        class="inline-flex  justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm text-green-700 shadow-sm ring-1 ring-inset ring-green-500 hover:ring-green-600 w-72"
         id="menu-button"
         aria-expanded="true"
         aria-haspopup="true"
@@ -12,7 +12,7 @@
       >
         {{ selectedLevel }}
         <svg
-          class="-mr-1 h-5 w-5 text-gray-400"
+          class="-mr-1 h-5 w-5 text-green-700"
           viewBox="0 0 20 20"
           fill="currentColor"
           aria-hidden="true"
@@ -28,7 +28,8 @@
 
     <div
       v-if="shouldShowOptions"
-      class="absolute top-14 z-20 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+      
+      class="absolute top-10 right-0 z-20 mt-2 w-64 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
       role="menu"
       aria-orientation="vertical"
       aria-labelledby="menu-button"
@@ -59,33 +60,40 @@
 <script setup lang="ts">
 import { useCorporatesStore } from '@/stores/corporates';
 import { computed, ref } from 'vue';
+import { useClickOutside } from '@/uses/useClickOutside';
 
 const corporateStore = useCorporatesStore();
 
 const options = [
   {
     value: 'absolute',
-    label: 'Absolute'
+    label: 'Absolute Emissions'
   },
   {
     value: 'number_of_employees',
-    label: 'Emissions per Employee'
+    label: 'Emissions to Employee Ratio'
   },
   {
     value: 'annual_revenue',
-    label: 'Emissions per Revenue'
+    label: 'Emissions to Revenue Ratio'
   }
 ];
+
+const moreOptionsEl = ref();
+const shouldShowOptions = ref();
+const toggleOptions = () => (shouldShowOptions.value = !shouldShowOptions.value);
+const hideOptions = () => (shouldShowOptions.value = false);
+
+useClickOutside(
+  moreOptionsEl,
+  hideOptions
+);
 
 const selectedOption = computed(() => corporateStore.scopeRatio);
 
 const selectedLevel = computed(
   () => options.filter(option => option.value == selectedOption.value)[0].label
 );
-
-const shouldShowOptions = ref();
-const toggleOptions = () => (shouldShowOptions.value = !shouldShowOptions.value);
-const hideOptions = () => (shouldShowOptions.value = false);
 
 const updateRatio = (value: string) => {
   toggleOptions();
