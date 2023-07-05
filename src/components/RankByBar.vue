@@ -7,7 +7,7 @@
       @click="() => corporateStore.updateOrderBy('scope_1')"
       :class="[
         'option border-gray-500 bg-white',
-        { 'active border-brandDark': corporateStore.orderBy == 'scope_1' }
+        { active: corporateStore.orderBy == 'scope_1' }
       ]"
       >Scope 1</span
     >
@@ -15,7 +15,7 @@
       @click="() => corporateStore.updateOrderBy('scope_2')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-brandDark': corporateStore.orderBy == 'scope_2' }
+        { active: corporateStore.orderBy == 'scope_2' }
       ]"
       >Scope 2</span
     >
@@ -23,7 +23,7 @@
       @click="() => corporateStore.updateOrderBy('scope_3')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-brandDark': corporateStore.orderBy == 'scope_3' }
+        { active: corporateStore.orderBy == 'scope_3' }
       ]"
       >Scope 3</span
     >
@@ -31,7 +31,7 @@
       @click="() => corporateStore.updateOrderBy('company', '')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-brandDark': corporateStore.orderBy == 'company' }
+        { active: corporateStore.orderBy == 'company' }
       ]"
       >Company Name</span
     >
@@ -40,7 +40,7 @@
       :class="[
         'option border-gray-400 bg-white',
         {
-          'active border-brandDark': corporateStore.orderBy == 'number_of_employees'
+          active: corporateStore.orderBy == 'number_of_employees'
         }
       ]"
       >Employees</span
@@ -49,7 +49,7 @@
       @click="() => corporateStore.updateOrderBy('annual_revenue')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-brandDark': corporateStore.orderBy == 'annual_revenue' }
+        { active: corporateStore.orderBy == 'annual_revenue' }
       ]"
       >Revenue</span
     >
@@ -90,5 +90,6 @@ const corporateStore = useCorporatesStore();
 
 .ranking-bar span.active {
   color: green;
+  border-color: #34861a;
 }
 </style>
