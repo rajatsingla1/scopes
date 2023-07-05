@@ -1,10 +1,10 @@
 <template>
-  <div class="relative flex  mr-0 " ref="moreOptionsEl">
+  <div class="relative flex mr-0" ref="moreOptionsEl">
     <div>
-      <span class=" pr-4 mb-1 text-gray-700 text-sm font-semibold">Show Scopes as</span>
+      <span class="pr-4 mb-1 text-gray-700 text-sm font-semibold">Show Scopes as</span>
       <button
         type="button"
-        class="inline-flex  justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm text-green-700 shadow-sm ring-1 ring-inset ring-green-500 hover:ring-green-600 w-72"
+        class="inline-flex justify-center gap-x-1.5 mt-4 rounded-full bg-white px-3 py-2 text-sm text-green-700 shadow-sm ring-1 ring-inset ring-brandDark hover:ring-green-600 w-72"
         id="menu-button"
         aria-expanded="true"
         aria-haspopup="true"
@@ -28,8 +28,7 @@
 
     <div
       v-if="shouldShowOptions"
-      
-      class="absolute top-10 right-0 z-20 mt-2 w-64 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+      class="absolute top-12 right-0 z-20 mt-2 w-64 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
       role="menu"
       aria-orientation="vertical"
       aria-labelledby="menu-button"
@@ -84,10 +83,7 @@ const shouldShowOptions = ref();
 const toggleOptions = () => (shouldShowOptions.value = !shouldShowOptions.value);
 const hideOptions = () => (shouldShowOptions.value = false);
 
-useClickOutside(
-  moreOptionsEl,
-  hideOptions
-);
+useClickOutside(moreOptionsEl, hideOptions);
 
 const selectedOption = computed(() => corporateStore.scopeRatio);
 

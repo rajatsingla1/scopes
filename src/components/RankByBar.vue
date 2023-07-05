@@ -7,7 +7,7 @@
       @click="() => corporateStore.updateOrderBy('scope_1')"
       :class="[
         'option border-gray-500 bg-white',
-        { 'active border-green-500': corporateStore.orderBy == 'scope_1' }
+        { 'active border-brandDark': corporateStore.orderBy == 'scope_1' }
       ]"
       >Scope 1</span
     >
@@ -15,7 +15,7 @@
       @click="() => corporateStore.updateOrderBy('scope_2')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-green-500': corporateStore.orderBy == 'scope_2' }
+        { 'active border-brandDark': corporateStore.orderBy == 'scope_2' }
       ]"
       >Scope 2</span
     >
@@ -23,7 +23,7 @@
       @click="() => corporateStore.updateOrderBy('scope_3')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-green-500': corporateStore.orderBy == 'scope_3' }
+        { 'active border-brandDark': corporateStore.orderBy == 'scope_3' }
       ]"
       >Scope 3</span
     >
@@ -31,7 +31,7 @@
       @click="() => corporateStore.updateOrderBy('company', '')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-green-500': corporateStore.orderBy == 'company' }
+        { 'active border-brandDark': corporateStore.orderBy == 'company' }
       ]"
       >Company Name</span
     >
@@ -40,7 +40,7 @@
       :class="[
         'option border-gray-400 bg-white',
         {
-          'active border-green-500': corporateStore.orderBy == 'number_of_employees'
+          'active border-brandDark': corporateStore.orderBy == 'number_of_employees'
         }
       ]"
       >Employees</span
@@ -49,7 +49,7 @@
       @click="() => corporateStore.updateOrderBy('annual_revenue')"
       :class="[
         'option border-gray-400 bg-white',
-        { 'active border-green-500': corporateStore.orderBy == 'annual_revenue' }
+        { 'active border-brandDark': corporateStore.orderBy == 'annual_revenue' }
       ]"
       >Revenue</span
     >
@@ -65,7 +65,8 @@ const corporateStore = useCorporatesStore();
 @media only screen and (max-width: 650px) {
   .ranking-bar {
     overflow: auto;
-    height: 60px;
+    height: 90px;
+    margin-bottom: 20px;
   }
 }
 
