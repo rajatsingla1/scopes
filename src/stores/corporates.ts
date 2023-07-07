@@ -62,7 +62,7 @@ export const useCorporatesStore = defineStore('corporates', () => {
     const filtered = corporates.filter((corporate: any) => {
       return (
         (corporate.scope1 || corporate.scope2 || corporate.scope3) &&
-        corporate.numberOfEmployees > 1000
+        corporate.numberOfEmployees >= 1000
       );
     });
     return filtered;

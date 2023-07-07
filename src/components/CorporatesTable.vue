@@ -10,54 +10,54 @@
               <tr>
                 <th
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 py-1.5 pl-4 pr-2 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 py-1.5 pl-4 pr-2 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8 border-b border-gray-300"
                 >
                   Rank
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 py-1.5 pl-4 pr-2 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 py-1.5 pl-4 pr-2 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8 border-b border-gray-300"
                 >
                   Entity
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
                   <div class="flex items-center flex-col">
                     <span class="block">Scope 1</span>
-                    <span class="text-center block font-normal text-sm"> (tCO2) </span>
+                    <span class="text-center block font-normal text-sm"> {{getEmissiontext(scopeRatio)}} </span>
                   </div>
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
                   <div class="flex items-center flex-col">
                     <span class="block">Scope 2</span>
-                    <span class="text-center block font-normal text-sm"> (tCO2) </span>
+                    <span class="text-center block font-normal text-sm"> {{getEmissiontext(scopeRatio)}} </span>
                   </div>
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
                   <div class="flex items-center flex-col">
                     <span class="block">Scope 3</span>
-                    <span class="text-center block font-normal text-sm"> (tCO2) </span>
+                    <span class="text-center block font-normal text-sm"> {{getEmissiontext(scopeRatio)}} </span>
                   </div>
                 </th>
                 <th
                   v-if="scopeRatio !== 'number_of_employees'"
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
                   Employees
                 </th>
                 <th
                   v-if="scopeRatio !== 'annual_revenue'"
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 w-32 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 w-36 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
                   <div class="flex flex-col">
                     <span class="block">Annual Revenue</span>
@@ -65,40 +65,18 @@
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-0 py-0 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter w-32"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-0 py-0 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter w-32 border-b border-gray-300"
                 >
                   Allied Offsets Grade
                 </th>
                 <th
                   scope="col"
-                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-1 py-1.5 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
+                  class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-1 py-1.5 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
                   Source
                 </th>
               </tr>
-              <tr>
-                <td
-                  colspan="2"
-                  class="sticky top-[50px] z-10 bg-white bg-opacity-75 px-3 py-1.5 pt-0 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                ></td>
-                <th
-                  colspan="3"
-                  scope="colgroup"
-                  class="sticky top-[50px] z-10 bg-white bg-opacity-75 px-3 py-1.5 pt-0 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                >
-                  {{ getEmissiontext(scopeRatio) }}
-                </th>
-                <td
-                  colspan="9"
-                  class="sticky top-[50px] z-10 bg-white bg-opacity-75 px-3 py-1.5 pt-0 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                ></td>
-              </tr>
-              <tr>
-                <td
-                  colspan="10"
-                  class="sticky top-[70px] z-10 border-b border-gray-300 bg-opacity-75 px-3 pt-0 -mt-2 text-center text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter"
-                ></td>
-              </tr>
+
             </thead>
             <tbody>
               <tr
@@ -134,7 +112,6 @@
                         {{ corporate.sector }}
                       </span>
                     </div>
-
                     <div
                       class="text-sm text-gray-500 font-normal flex"
                       v-if="corporate.location"
@@ -153,6 +130,7 @@
                     </div>
                   </div>
                 </td>
+                
                 <td
                   class="relative whitespace-wrap border-b border-gray-200 py-1 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
@@ -265,15 +243,15 @@ const scopeRatio = computed(() => corporateStore.scopeRatio);
 const emissionTextOptions = [
   {
     value: 'absolute',
-    label: 'Absolute Emissions'
+    label: '(tCO2)'
   },
   {
     value: 'number_of_employees',
-    label: 'Emissions to Employee Ratio'
+    label: 'to employee ratio'
   },
   {
     value: 'annual_revenue',
-    label: 'Emissions to Revenue Ratio'
+    label: 'to revenue ratio'
   }
 ];
 
