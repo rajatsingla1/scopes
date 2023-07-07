@@ -17,7 +17,6 @@ export const useCorporatesStore = defineStore('corporates', () => {
   const orderByOrder = ref('-');
   const scopeRatio = ref('number_of_employees');
 
-
   const fetchLocations = async () => {
     try {
       const response = await axios.get(
@@ -59,6 +58,16 @@ export const useCorporatesStore = defineStore('corporates', () => {
     return slug;
   });
 
+  const cleanUpCorporates = (corporates: any) => {
+    const filtered = corporates.filter((corporate: any) => {
+      return (
+        (corporate.scope1 || corporate.scope2 || corporate.scope3) &&
+        corporate.numberOfEmployees > 1000
+      );
+    });
+    return filtered;
+  };
+
   const fetchCorporates = async () => {
     try {
       loading.value = true;
@@ -67,7 +76,7 @@ export const useCorporatesStore = defineStore('corporates', () => {
       const response = await axios.get(
         `https://api.alliedoffsets.com/corporates-public?page=1&per_page=${perPage.value}&order_by=${orderBy.value}${ratioSlug.value}${orderByOrder.value}${filterBySlug.value}`
       );
-      corporates.value = response.data.result;
+      corporates.value = cleanUpCorporates(response.data.result);
       total.value = response.data.pagination.total;
       if (response.data.pagination.resultSize < perPage.value) {
         hasMore.value = false;
@@ -109,9 +118,11 @@ export const useCorporatesStore = defineStore('corporates', () => {
       const response = await axios.get(
         `https://api.alliedoffsets.com/corporates-public?page=${
           currentPage.value + 1
-        }&per_page=${perPage.value}&order_by=${orderBy.value}${ratioSlug.value}${orderByOrder.value}${filterBySlug.value}`
+        }&per_page=${perPage.value}&order_by=${orderBy.value}${ratioSlug.value}${
+          orderByOrder.value
+        }${filterBySlug.value}`
       );
-      corporates.value = corporates.value.concat(response.data.result);
+      corporates.value = corporates.value.concat(cleanUpCorporates(response.data.result));
       if (response.data.pagination.resultSize < perPage.value) {
         hasMore.value = false;
       }

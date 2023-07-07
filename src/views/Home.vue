@@ -21,14 +21,17 @@
         </button>
       </div>
 
-      <div class="items-center mx-auto flex max-w-6xl mt-4 w-auto">
+      <div class="items-center mx-auto flex max-w-6xl mt-6 w-auto">
         <span
           class="material-symbols-rounded text-brandDark font-normal cursor-pointer"
           @click.prevent="toggleFilters()"
         >
           {{ showFilters ? 'expand_less' : 'expand_more' }}
         </span>
-        <span class="text-brandDark cursor-pointer" @click.prevent="toggleFilters()">
+        <span
+          class="text-gray-400 cursor-pointer text-sm"
+          @click.prevent="toggleFilters()"
+        >
           {{ showFilters ? 'Hide' : 'Show' }} Country and Sector filters
         </span>
       </div>
