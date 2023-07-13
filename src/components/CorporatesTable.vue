@@ -48,14 +48,14 @@
                   </div>
                 </th>
                 <th
-                  v-if="scopeRatio !== 'number_of_employees'"
+                  v-if="scopeRatio === 'absolute'"
                   scope="col"
                   class="sticky top-[0px] z-10 bg-white bg-opacity-75 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
                   Employees
                 </th>
                 <th
-                  v-if="scopeRatio !== 'annual_revenue'"
+                  v-if="scopeRatio === 'absolute'"
                   scope="col"
                   class="sticky top-[0px] z-10 bg-white bg-opacity-75 w-36 px-3 py-1.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter border-b border-gray-300"
                 >
@@ -165,7 +165,7 @@
                   }}
                 </td>
                 <td
-                  v-if="scopeRatio !== 'number_of_employees'"
+                  v-if="scopeRatio === 'absolute'"
                   class="relative whitespace-wrap border-b border-gray-200 py-1 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
                   <span class="text-sm text-gray-500 font-normal">{{
@@ -173,7 +173,7 @@
                   }}</span>
                 </td>
                 <td
-                  v-if="scopeRatio !== 'annual_revenue'"
+                  v-if="scopeRatio === 'absolute'"
                   class="relative whitespace-wrap border-b border-gray-200 py-1 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                 >
                   <span

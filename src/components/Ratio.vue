@@ -66,7 +66,7 @@ const corporateStore = useCorporatesStore();
 const options = [
   {
     value: 'absolute',
-    label: 'Absolute Emissions'
+    label: 'Underlying Data'
   },
   {
     value: 'number_of_employees',
